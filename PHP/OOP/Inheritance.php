@@ -3,6 +3,8 @@
 // that is parent class of class name car
 class encapsulation{
 
+    const MESSAGE = 'This Is Const Variable';
+
     public $brand;
 
     public $manufacture_year;
@@ -34,6 +36,11 @@ class encapsulation{
     function get_wheels()
     {
         return $this->wheel_count;
+    }
+
+    function get_Message()
+    {
+        return self::MESSAGE;
     }
 }
 
@@ -71,7 +78,7 @@ $tesla->add_wheel();
 
 $tesla->set_capacity(100000);
 
-echo $tesla->get_Brand().' '.$tesla->get_Age().' '.$tesla->get_wheels().' '.$tesla->get_capacity();
+echo $tesla->get_Brand().' '.$tesla->get_Age().' '.$tesla->get_wheels().' '.$tesla->get_capacity().'kwh '.$tesla->get_Message();
 
 
 
